@@ -1,6 +1,7 @@
 ## Commands
 ```
-kubectl get nodes   [To get all your nodes].
+kubectl get nodes                      [Get all your nodes].
+kubectl get nodes -o wide              [Get nodes with more information].
 ```
 
 ## Removing kubernetes for ubuntu
