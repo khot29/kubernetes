@@ -3,7 +3,7 @@
 kubectl get nodes                      [Get all your nodes].
 kubectl get nodes -o wide              [Get nodes with more information].
 kubectl config view
-kubectl describe node YourPodName
+kubectl describe node YourWorkerNodeName
 ```
 
 ## Removing kubernetes for ubuntu
