@@ -7,3 +7,8 @@ sudo rm -rf ~/.kube
 ```
 
 ## making a {master and worker node} structure
+
+## to get unique token for connecting worker nodes 
+```
+sudo kubeadm token create --print-join-command
+```
