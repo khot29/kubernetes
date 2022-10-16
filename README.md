@@ -32,7 +32,7 @@ Run the below commands in master
 2. mkdir -p $HOME/.kube
 3. sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 4. sudo chown $(id -u):$(id -g) $HOME/.kube/config
-5. kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+5. kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml     -------- Container Network Interface (CNI)
   
 6. sudo kubeadm token create --print-join-command    
 Note : [the above command will provide you the kubeadm join command with your unique sha key
