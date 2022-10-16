@@ -27,15 +27,17 @@ sudo systemctl restart docker
 sudo swapoff -a
 
 
-##Run the below commands in master
+Run the below commands in master
   sudo kubeadm init
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
   kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
   
-##Run the below commands in worker nodes
-  sudo kubeadm token create --print-join-command    [this command will provide you the kubeadm join command with your unique sha key]
+Run the below commands in worker nodes
+  sudo kubeadm token create --print-join-command    
+Note : [the above command will provide you the kubeadm join command with your unique sha key
+        after copying that paste it to your worker nodes]
 ```
 
 ## to get unique token for connecting worker nodes 
