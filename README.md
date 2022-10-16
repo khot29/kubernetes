@@ -6,4 +6,4 @@ sudo apt-get autoremove
 sudo rm -rf ~/.kube
 ```
 
-## making a master and worker node structure
+## making a {master and worker node} structure
