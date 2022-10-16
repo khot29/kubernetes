@@ -8,7 +8,8 @@ sudo rm -rf ~/.kube
 
 ## making a {master and worker node} structure
 ```
-- Configuration - Master, Worker1, Worker2 Run the below commands in master and all your worker
+Configuration - Master, Worker1, Worker2 Run the below commands in master and all your worker
+
 cat <<EOF | sudo tee /etc/docker/daemon.json
 {
 "exec-opts": ["native.cgroupdriver=systemd"],
@@ -19,10 +20,14 @@ cat <<EOF | sudo tee /etc/docker/daemon.json
 "storage-driver": "overlay2"
 }
 EOF
--sudo systemctl enable docker
--sudo systemctl daemon-reload
--sudo systemctl restart docker
--sudo swapoff -a
+
+sudo systemctl enable docker
+
+sudo systemctl daemon-reload
+
+sudo systemctl restart docker
+
+sudo swapoff -a
 ```
 
 ## to get unique token for connecting worker nodes 
