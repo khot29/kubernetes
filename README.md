@@ -1,3 +1,8 @@
+## Commands
+```
+kubectl get nodes   [To get all your nodes].
+```
+
 ## Removing kubernetes for ubuntu
 ```
 kubeadm reset
