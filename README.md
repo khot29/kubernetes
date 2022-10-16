@@ -8,9 +8,9 @@ sudo rm -rf ~/.kube
 
 ## making a {master and worker node} structure
 ```
-Configuration - Master, Worker1, Worker2 Run the below commands in master and all your worker
+1. Configuration - Master, Worker1, Worker2 Run the below commands in master and all your worker
 
-cat <<EOF | sudo tee /etc/docker/daemon.json
+2. cat <<EOF | sudo tee /etc/docker/daemon.json
 {
 "exec-opts": ["native.cgroupdriver=systemd"],
 "log-driver": "json-file",
@@ -21,21 +21,21 @@ cat <<EOF | sudo tee /etc/docker/daemon.json
 }
 EOF
 
-sudo systemctl enable docker
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-sudo swapoff -a
+3. sudo systemctl enable docker
+4. sudo systemctl daemon-reload
+5. sudo systemctl restart docker
+6. sudo swapoff -a
 
 
 Run the below commands in master
-  sudo kubeadm init
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+1. sudo kubeadm init
+2. mkdir -p $HOME/.kube
+3. sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+4. sudo chown $(id -u):$(id -g) $HOME/.kube/config
+5. kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
   
 Run the below commands in worker nodes
-  sudo kubeadm token create --print-join-command    
+1. sudo kubeadm token create --print-join-command    
 Note : [the above command will provide you the kubeadm join command with your unique sha key
         after copying that paste it to your worker nodes]
 ```
