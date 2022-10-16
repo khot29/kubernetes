@@ -2,6 +2,7 @@
 ```
 kubectl get nodes                      [Get all your nodes].
 kubectl get nodes -o wide              [Get nodes with more information].
+kubectl config view
 ```
 
 ## Removing kubernetes for ubuntu
