@@ -34,10 +34,9 @@ Run the below commands in master
 4. sudo chown $(id -u):$(id -g) $HOME/.kube/config
 5. kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
   
-Run the below commands in worker nodes
-1. sudo kubeadm token create --print-join-command    
+6. sudo kubeadm token create --print-join-command    
 Note : [the above command will provide you the kubeadm join command with your unique sha key
-        after copying that paste it to your worker nodes]
+        after copying that paste it in your worker nodes]
 ```
 
 ## to get unique token for connecting worker nodes 
